@@ -5,10 +5,7 @@ def to_hex(r, g, b)
 end
 
 def to_ints(hex)
-  r, g, b = hex.scan(/\w\w/)
-  [r, g, b].map do |s|
-    s.hex
-  end
+  hex.scan(/\w\w/).map(&:hex)
 end
 # '#12abcd'.scan(/\w/)       #=> ["1", "2", "a", "b", "c", "d"]
 # '#12abcd'.scan(/\w\w/)     #=> ["12", "ab", "cd"]
